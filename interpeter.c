@@ -13,10 +13,11 @@ void interpretBrainFuck(char * input) // recieves a 'string' and reads & execute
       char *ptr = array;
       int i;
       size_t input_length = strlen(input);
+      int counter;
 
       for (i = 0; !input[i]; i++)
         {
-            int counter;
+
 
             switch (input[i])
             {
