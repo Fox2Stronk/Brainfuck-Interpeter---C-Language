@@ -89,7 +89,7 @@ void interpretBrainFuck(char * input) // recieves a 'string' and reads & execute
                             return;
                         }
 
-                        // making sure nested 'loops' work as intended (each brace should jump to its matching brace:
+                        // making sure nested 'loops' work as intended; each brace should jump to its matching brace:
                         if (input[i] == ']')
                         {
                             --counter;
