@@ -23,4 +23,3 @@ int main(int argc, char * * argv) {
   printf("ERROR! please enter a single argument; the file's path.");
   return 0;
 }
-

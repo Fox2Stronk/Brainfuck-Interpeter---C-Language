@@ -4,6 +4,7 @@
 #define PAGE_SIZE 4096
 #define STACK_SIZE PAGE_SIZE * 8
 
+
 enum Operator {
   INC_DP = '>', DEC_DP = '<', INC = '+', DEC = '-', OUTPUT = '.', INPUT = ',', OPEN = '[', CLOSE = ']'
 };
@@ -16,7 +17,7 @@ void interpretBrainFuck(char * input) {
 
   int i;
   size_t input_length = strlen(input);
-  for (i = 0; !input[i]; i++) {
+  for (i = 0; input[i] != '\0'; i++) {
     int counter;
 
     switch (input[i]) {
@@ -43,10 +44,9 @@ void interpretBrainFuck(char * input) {
     case OUTPUT:
       if ( * ptr >= 0) // output the byte at the data pointer
         putchar( * ptr);
-      else {
+      else
         printf("ERROR! Cannot print negative char");
-        break;
-      }
+      break;
     case INPUT:
       * ptr = getchar(); // accept one byte of input, storing its value in the byte at the data pointer.
       break;
