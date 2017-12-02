@@ -43,8 +43,10 @@ void interpretBrainFuck(char* input)
                 if(*ptr>=0)                 // output the byte at the data pointer
                 putchar(*ptr);
                 else
+                {
                 printf("ERROR! Cannot print negative char");
-                break;;
+                break;
+                }
             case INPUT:
                 *ptr = getchar();         // accept one byte of input, storing its value in the byte at the data pointer.
                 break;
