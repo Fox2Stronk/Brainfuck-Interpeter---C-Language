@@ -1,7 +1,30 @@
 # Brainfuck-Interpeter---C-Language
 # A simple "Brainfuck" interpeter written in the C Programming Language.
-## How to use:
-### 1) gcc -Wall main.c interpeter.c interpeter.h read_file.c read_file.h -o interpeter
-### 2) ` interpeter.exe $FILE_PATH ` / ` ./interpeter $FILE_PATH `  - $FILE_PATH being the Brainfuck file (preferably .bf but not a must)
-### 3) ????
-### 4) Profit!
+## What is Brainfuck?
+>Brainfuck is an esoteric programming language created in 1993 by Urban Müller, and notable for its extreme minimalism.
+- Wikipedia
+
+
+You can learn more about the language in <a href="https://en.wikipedia.org/wiki/Brainfuck#Language_design">Wikipedia </a>
+
+## Prerequisites
+```
+gcc
+```
+## Compiling:
+```
+gcc -Wall main.c interpeter.c interpeter.h read_file.c read_file.h -o interpeter
+
+```
+## Running:
+### Windows
+```
+interpeter.exe $FILE_PATH
+```
+### Linux
+```
+./interpeter $FILE_PATH
+```
+
+## Why a brainfuck interpeter?
+because i'm learning c and it seemed like a fun project in order to learn.
