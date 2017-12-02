@@ -13,7 +13,7 @@ void interpretBrainFuck(char* input)
 
     int i;
     size_t input_length = strlen(input);
-    for( i = 0; input[i]!='\0'; i++)
+    for( i = 0; !input[i]; i++)
         {
             int counter;
 
