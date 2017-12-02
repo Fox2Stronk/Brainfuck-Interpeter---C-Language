@@ -16,11 +16,10 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
       int counter;
 
       for (i = 0; !input[i]; i++)
+      {
+
+        switch (input[i])
         {
-
-
-            switch (input[i])
-            {
 
             case INC_DP: // increase data pointer by 1
 
