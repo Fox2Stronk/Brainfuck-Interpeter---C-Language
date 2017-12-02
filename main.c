@@ -14,7 +14,7 @@ int main(int argc, char * * argv) {
     {
         if (access(argv[1], F_OK) != -1) // check if file exists & is readable
         {
-          char * content = readFile(argv[1]);
+          char *content = readFile(argv[1]);
           interpretBrainFuck(content);
         }
         else

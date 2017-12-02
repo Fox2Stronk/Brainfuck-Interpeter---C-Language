@@ -7,7 +7,7 @@
 
 enum Operator {INC_DP = '>', DEC_DP = '<', INC = '+', DEC = '-', OUTPUT = '.', INPUT = ',', OPEN = '[', CLOSE = ']'};
 
-void interpretBrainFuck(char * input) // recieves a 'string' and reads & executes it as brainfuck instructions
+void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes it as brainfuck instructions
     {
       char array[STACK_SIZE] = {0};
       char *ptr = array;
@@ -59,7 +59,7 @@ void interpretBrainFuck(char * input) // recieves a 'string' and reads & execute
 
             case OUTPUT: // output the byte at the data pointer
 
-                if ( *ptr >= 0) // checks that the character is not negative before it's being printed
+                if (*ptr >= 0) // checks that the character is not negative before it's being printed
                 {
                     putchar( * ptr);
                 }
@@ -107,7 +107,7 @@ void interpretBrainFuck(char * input) // recieves a 'string' and reads & execute
 
             case CLOSE: // if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching O command.
 
-                if ( *ptr)
+                if (*ptr)
                 {
                     counter = 1;
                     while (counter)
