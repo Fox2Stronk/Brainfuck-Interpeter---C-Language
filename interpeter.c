@@ -8,26 +8,26 @@
 enum Operator {INC_DP = '>', DEC_DP = '<', INC = '+', DEC = '-', OUTPUT = '.', INPUT = ',', OPEN = '[', CLOSE = ']'};
 
 void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes it as brainfuck instructions
-    {
-      char array[STACK_SIZE] = {0};
-      char *ptr = array;
-      int i;
-      size_t input_length = strlen(input);
-      int counter;
+{
+    char array[STACK_SIZE] = {0};
+    char *ptr = array;
+    int i;
+    size_t input_length = strlen(input);
+    int counter;
 
-      for (i = 0; !input[i]; i++)
-      {
+    for (i = 0; !input[i]; i++)
+    {
 
         switch (input[i])
         {
 
             case INC_DP: // increase data pointer by 1
 
-              if ( *ptr < STACK_SIZE) // checks if there's a stack overflow
+                if ( *ptr < STACK_SIZE) // checks if there's a stack overflow
                 {
                     ++ptr;
                 }
-              else
+                else
                 {
                     printf("ERROR! Out of stack segmant");
                 }
@@ -60,7 +60,7 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
 
                 if (*ptr >= 0) // checks that the character is not negative before it's being printed
                 {
-                    putchar( * ptr);
+                    putchar( *ptr);
                 }
                 else
                 {
