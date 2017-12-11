@@ -13,7 +13,7 @@ gcc
 ```
 ## Compiling:
 ```
-gcc -Wall main.c interpeter.c interpeter.h read_file.c read_file.h -o interpeter
+gcc -Wall main.c interpeter.c read_file.c -o interpeter
 
 ```
 ## Running:
