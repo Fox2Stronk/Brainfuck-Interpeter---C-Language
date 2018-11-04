@@ -15,7 +15,7 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
     size_t input_length = strlen(input);
     int counter;
 
-    for (i = 0; !input[i]; i++)
+    for (i = 0; input[i]; i++)
     {
 
         switch (input[i])
@@ -23,7 +23,7 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
 
             case INC_DP: // increase data pointer by 1
 
-                if ( *ptr < STACK_SIZE) // checks if there's a stack overflow
+                if ( ptr - array < STACK_SIZE) // checks if there's a stack overflow
                 {
                     ++ptr;
                 }
@@ -35,7 +35,7 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
 
             case DEC_DP: // decrease data pointer by 1
 
-                if ( *ptr >= 0) // check if there's a stack underflow
+                if ( ptr - array > 0) // check if there's a stack underflow
                 {
                     --ptr;
                 }
@@ -43,8 +43,6 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
                 {
                     printf("ERROR! Out of stack segmant");
                 }
-
-                break;
 
             case INC: // increase the byte at the data pointer by 1
 
