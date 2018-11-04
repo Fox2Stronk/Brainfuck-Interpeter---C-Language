@@ -43,6 +43,8 @@ void interpretBrainFuck(char *input) // recieves a 'string' and reads & executes
                 {
                     printf("ERROR! Out of stack segmant");
                 }
+               
+              break;
 
             case INC: // increase the byte at the data pointer by 1
 
